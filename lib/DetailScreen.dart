@@ -6,12 +6,12 @@ class DetailScreen extends StatefulWidget {
 
   String name;
   String capital;
-  String population;
+  int population;
   String flag;
-  String area;
+  double area;
   String nativeName;
   DetailScreen(
-      {this.name,this.nativeName, this.capital, this.population, this.flag,this.area});
+      {@required this.name,@required this.nativeName,@required  this.capital,@required  this.population,@required  this.flag,@required this.area});
 
   @override
   _DetailScreenState createState() => _DetailScreenState();
@@ -58,8 +58,8 @@ class _DetailScreenState extends State<DetailScreen> {
                 children: <Widget>[
                   Text("Country: ${widget.name}", style: _style,),
                   Text("Capital: ${widget.capital}", style: _style,),
-                  Text("Population: ${widget.population}", style: _style,),
-                  Text("Area: ${widget.area}", style: _style,),
+                  Text("Population: ${widget.population.toString()}", style: _style,),
+                  Text("Area: ${widget.area.toString()}", style: _style,),
                   Text("Native name: ${widget.nativeName}",style: _style,)
                 ],
 
